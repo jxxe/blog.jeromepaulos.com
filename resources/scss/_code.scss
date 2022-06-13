@@ -1,0 +1,49 @@
+code {
+    font-family: var(--monospace-font);
+    border: solid 1px var(--border-color);
+    padding: 1px 3px;
+    background-color: var(--backdrop-color);
+}
+
+pre > code {
+    overflow-x: scroll;
+    padding: 1rem;
+    display: block;
+
+    /*.token-number {
+        color: var(--orange);
+    }
+
+    .token-addition {
+        color: var(--green);
+    }
+
+    .token-deletion {
+        color: var(--red);
+    }
+
+    .token-attribute,
+    .token-attr,
+    .token-bullet,
+    .token-link,
+    .token-section,
+    .token-string,
+    .token-symbol,
+    .token-template-variable,
+    .token-variable {
+        color: var(--green);
+    }
+
+    .token-keyword,
+    .token-name,
+    .token-section,
+    .token-selector-tag,
+    .token-strong,
+    .token-type {
+        color: var(--blue);
+    }
+
+    .token-emphasis {
+        font-style: italic;
+    }*/
+}

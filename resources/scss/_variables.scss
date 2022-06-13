@@ -1,0 +1,123 @@
+:root {
+    --body-font: 'neue-haas-unica', sans-serif;
+    --monospace-font: 'calling-code', monospace;
+    --display-font: 'lores-21-serif', var(--body-font);
+
+    --background-color: white;
+    --backdrop-color: rgb(0 0 0 / 3%);
+    --text-color: rgb(0 0 0 / 67%);
+    --border-color: rgb(0 0 0 / 15%);
+    --select-color: rgb(0 0 0 / 10%);
+
+    &[data-ambiance~=morning] {
+        &[data-ambiance~=freezing],
+        &[data-ambiance~=frigid],
+        &[data-ambiance~=cold],
+        &[data-ambiance~=chilly] {
+            --background-color: #c3c9e6;
+            --glow-filter: grayscale(50%);
+        }
+
+        &[data-ambiance~=pleasant],
+        &[data-ambiance~=blustery] {
+            --background-color: #f7f0f0;
+            --glow-filter: hue-rotate(15deg) opacity(75%);
+        }
+
+        &[data-ambiance~=warm],
+        &[data-ambiance~=hot] {
+            --background-color: #f5dcbb;
+            --glow-filter: hue-rotate(15deg);
+        }
+
+        &[data-ambiance~=blistering],
+        &[data-ambiance~=scorching] {
+            --background-color: #f5c1ba;
+            --glow-filter: hue-rotate(-20deg);
+        }
+    }
+
+    &[data-ambiance~=day],
+    &[data-ambiance~=afternoon] {
+        --glow-filter: grayscale(100%) brightness(1000%);
+
+        &[data-ambiance~=freezing],
+        &[data-ambiance~=frigid],
+        &[data-ambiance~=cold],
+        &[data-ambiance~=chilly] {
+            --background-color: #bdd9e9;
+        }
+
+        &[data-ambiance~=pleasant],
+        &[data-ambiance~=blustery],
+        &[data-ambiance~=warm],
+        &[data-ambiance~=hot] {
+            --background-color: #6fbff8;
+        }
+
+        &[data-ambiance~=blistering],
+        &[data-ambiance~=scorching] {
+            --background-color: #36a7f7;
+        }
+    }
+
+    &[data-ambiance~=evening] {
+        &[data-ambiance~=freezing],
+        &[data-ambiance~=frigid],
+        &[data-ambiance~=cold],
+        &[data-ambiance~=chilly] {
+            --background-color: #bccce1;
+            --glow-filter: hue-rotate(-20deg);
+        }
+
+        &[data-ambiance~=pleasant],
+        &[data-ambiance~=blustery],
+        &[data-ambiance~=warm],
+        &[data-ambiance~=hot] {
+            --background-color: #e8a198;
+            --glow-filter: hue-rotate(10deg);
+        }
+
+        &[data-ambiance~=blistering],
+        &[data-ambiance~=scorching] {
+            --background-color: #e8b698;
+            --glow-filter: hue-rotate(-10deg);
+        }
+    }
+
+    &[data-ambiance~=night] {
+        --backdrop-color: rgb(255 255 255 / 5%);
+        --text-color: rgb(255 255 255 / 67%);
+        --border-color: rgb(255 255 255 / 15%);
+        --select-color: rgb(255 255 255 / 10%);
+
+        &[data-ambiance~=freezing],
+        &[data-ambiance~=frigid] {
+            --background-color: #202b40;
+            --glow-filter: grayscale(100%) brightness(1000%);
+        }
+
+        &[data-ambiance~=cold],
+        &[data-ambiance~=chilly] {
+            --background-color: #2a3a44;
+            --glow-filter: hue-rotate(180deg);
+        }
+
+        &[data-ambiance~=pleasant],
+        &[data-ambiance~=blustery] {
+            --background-color: #1a1a1a;
+            --glow-filter: grayscale(100%);
+        }
+
+        &[data-ambiance~=warm],
+        &[data-ambiance~=hot] {
+            --background-color: #2f2522;
+        }
+
+        &[data-ambiance~=blistering],
+        &[data-ambiance~=scorching] {
+            --background-color: #382828;
+            --glow-filter: hue-rotate(10deg);
+        }
+    }
+}

@@ -1,0 +1,70 @@
+* { box-sizing: border-box; }
+::selection { background-color: var(--select-color); }
+
+:focus-visible {
+    outline: solid 1px var(--text-color);
+    outline-offset: -1px;
+}
+
+html {
+    position: relative;
+}
+
+body {
+    max-width: calc(3rem + 600px + 3rem);
+    margin: 0 auto;
+    padding: 3rem 3rem 10rem;
+    min-height: 100vh;
+
+    color: var(--text-color);
+    font-family: var(--body-font);
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    background-color: var(--background-color);
+
+    &::before, &::after {
+        content: '';
+        pointer-events: none;
+
+        background-image: url('/dist/background.webp');
+        filter: var(--glow-filter);
+
+        background-size: max(100%, 1000px);
+        background-position: top center;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        z-index: -100;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+
+        animation-name: fade;
+        animation-delay: 0.5s;
+        animation-duration: 2.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 0.5; }
+        }
+    }
+
+    &::after {
+        // content: none;
+        bottom: 0;
+        transform: rotate(180deg);
+    }
+
+    & > * {
+        & > :first-child { margin-top: 0; }
+        & > :last-child { margin-bottom: 0; }
+    }
+}
